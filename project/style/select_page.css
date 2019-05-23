@@ -1,0 +1,37 @@
+.select-list {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    font-weight: bold;
+}
+
+.delete-link {
+    float: right;
+}
+
+.delete-icon {
+    font-size: bold;
+    font-size: 1.5em;
+    float: right;
+}
+
+.heading {
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  font-style: italic;
+  width: 100%;
+  padding: 1.25em 0.5em;
+}
+
+@media (min-width: 576px) {
+  .heading, .select-list { width: 100% };
+}
+
+@media (min-width: 768px) {
+  .heading, .select-list { width: 500px; }
+}
+
+@media (min-width: 1200px) {
+  .heading, .select-list { width: 700px; }
+}

@@ -1,0 +1,11 @@
+@media (min-width: 576px) {
+  .main-page-logo { width: 100px; }
+}
+
+@media (min-width: 768px) {
+  .main-page-logo { width: 200px; }
+}
+
+@media (min-width: 1200px) {
+  .main-page-logo { width: 300px; }
+}
