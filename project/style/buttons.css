@@ -1,4 +1,72 @@
 .boutton-iconimage
 {
 	width:		40px;
+	height: 	40px;
 }
+
+.button-colour-line
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.btn-init
+{
+	padding: 0;
+}
+
+#black
+{
+	background: url(../img/Color_Black.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#blue
+{
+	background: url(../img/Color_Blue.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#green
+{
+	background: url(../img/Color_Green.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#grey
+{
+	background: url(../img/Color_Grey.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#magenta
+{
+	background: url(../img/Color_Magenta.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#red
+{
+	background: url(../img/Color_Red.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#turquoise
+{
+	background: url(../img/Color_Turquoise.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#white
+{
+	background: url(../img/Color_White.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#yellow
+{
+	background: url(../img/Color_Yellow.png) no-repeat;
+	background-size: 100% 100%;
+}
+
