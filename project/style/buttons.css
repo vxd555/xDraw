@@ -70,3 +70,92 @@
 	background-size: 100% 100%;
 }
 
+#style_solid
+{
+	background: url(../img/Style_Solid.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#style_dotted
+{
+	background: url(../img/Style_Dotted.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#style_point
+{
+	background: url(../img/Style_Point.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*--------------------SHOW toolbar elements-------------------------*/
+.shape-show
+{
+	display:			inline-block;
+}
+
+.color-show
+{
+	display:			inline-block;
+}
+
+.style-show
+{
+	display:			inline-block;
+}
+
+.edit-show
+{
+	display:			inline-block;
+}
+
+.transposition-show
+{
+	display:			inline-block;
+}
+
+.operation-show
+{
+	display:			inline-block;
+}
+
+.option-show
+{
+	display:			inline-block;
+}
+
+/*--------------------HIDE toolbar elements-------------------------*/
+.shape-hide
+{
+	display:			none;
+}
+
+.color-hide
+{
+	display:			none;
+}
+
+.style-hide
+{
+	display:			none;
+}
+
+.edit-hide
+{
+	display:			none;
+}
+
+.transposition-hide
+{
+	display:			none;
+}
+
+.operation-hide
+{
+	display:			none;
+}
+
+.option-hide
+{
+	display:			none;
+}
