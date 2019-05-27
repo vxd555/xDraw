@@ -70,3 +70,21 @@
 	background-size: 100% 100%;
 }
 
+#solid
+{
+	background: url(../img/Style_Solid.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#dotted
+{
+	background: url(../img/Style_Dotted.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#point
+{
+	background: url(../img/Style_Point.png) no-repeat;
+	background-size: 100% 100%;
+}
+
