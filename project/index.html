@@ -1,80 +1,118 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!--	meta	-->
-		<meta charset="UTF-8">
-		<meta name="description" content="xDraw">
-		<meta name="keywords" content="html5,js,jquery,xDraw">
-		<meta name="author" content="Dawid Macias,Krystian Nowak,Przemysław Prencel,Maciej Nabiałczyk">
-		<link rel="icon" href="./img/icon.png">
-		<title>xDraw</title>
 
-		 <!-- Latest compiled and minified CSS -->
-		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<head>
+	<!--	meta	-->
+	<meta charset="UTF-8">
+	<meta name="description" content="xDraw">
+	<meta name="keywords" content="html5,js,jquery,xDraw">
+	<meta name="author" content="Dawid Macias,Krystian Nowak,Przemysław Prencel,Maciej Nabiałczyk">
+	<link rel="icon" href="./img/icon.png">
+	<title>xDraw</title>
 
-		 <!-- jQuery library -->
-		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
- 
-		 <!-- Latest compiled JavaScript -->
-		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-		 <!-- Add icon library -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-		 <!--	style	-->
-		<link rel="stylesheet" href="style/style.css">
-		<link rel="stylesheet" href="style/buttons.css">
-	</head>
-	<body>
-		<form class="navbar-form navbar-left" action="#" method="post">
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript file -->
+	<script src="src/javascript.js"></script>
+
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--	style	-->
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/buttons.css">
+</head>
+
+<body>
+	<form class="navbar-form navbar-left" action="#" method="post">
 		<div class="container">
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-square-o"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-circle-o"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-minus"></i></button>
+				<button type="button" class="btn boutton-iconimage" id="show-shape-bt"></button>
+				<div class="wrap" id="show-shape">
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-square-o"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-circle-o"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-minus"></i></button>
+				</div>
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="black" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="white" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="grey" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="red" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="green" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="blue" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="magenta" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="turquoise" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="yellow" class="button-colour-line"></i></button>
+				<button type="button" class="btn boutton-iconimage" id="show-color-bt"></button>
+				<div class="wrap" id="show-color">
+					<button type="button" class="btn boutton-iconimage"><i id="black"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="white"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="grey"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="red"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="green"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="blue"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="magenta"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="turquoise"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="yellow"
+							class="button-colour-line"></i></button>
+				</div>
+			</div>
+			<div class="row">
+				<button type="button" class="btn boutton-iconimage" id="show-line-bt"></button>
+				<div class="wrap" id="show-line">
+					<button type="button" class="btn boutton-iconimage"><i id="solid"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="dotted"
+							class="button-colour-line"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i id="point"
+							class="button-colour-line"></i></button>
+				</div>
+			</div>
+			<div class="row">
+				<button type="button" class="btn boutton-iconimage" id="show-operation-bt"></button>
+				<div class="wrap" id="show-operation">
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-arrows"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-mouse-pointer"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-trash-o"></i></button>
+				</div>
+			</div>
+			<div class="row">
+				<button type="button" class="btn boutton-iconimage" id="show-rotate-bt"></button>
+				<div class="wrap" id="show-rotate">
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-arrows-v"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-arrows-h"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-level-up"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-level-down"></i></button>
+				</div>
+			</div>
+			<div class="row">
+				<button type="button" class="btn boutton-iconimage" id="show-undo-bt"></button>
+				<div class="wrap" id="show-undo">
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-undo"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-repeat"></i></button>
+				</div>
+			</div>
+			<div class="row">
+				<button type="button" class="btn boutton-iconimage" id="show-file-bt"></button>
+				<div class="wrap" id="show-file">
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-download"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-upload"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-folder"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-folder-open"></i></button>
+					<button type="button" class="btn boutton-iconimage"><i class="fa fa-sign-out"></i></button>
+				</div>
+			</div>
+	</form>
+</body>
+<script>
 
-			</div>
-			<div class="row">
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="solid" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="dotted" class="button-colour-line"></i></button>
-				<button type="button" class="btn boutton-iconimage btn-init"><i id="point" class="button-colour-line"></i></button>
-			</div>
-			<div class="row">
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-arrows"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-mouse-pointer"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-trash-o"></i></button>
-			</div>
-			<div class="row">
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-arrows-v"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-arrows-h"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-level-up"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-level-down"></i></button>
-			</div>
-			<div class="row">
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-undo"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-repeat"></i></button>
-			</div>
-			<div class="row">
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-download"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-upload"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-folder"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-folder-open"></i></button>
-				<button type="button" class="btn boutton-iconimage"><i class="fa fa-sign-out"></i></button>
-			</div>
-		</form>
-	</body>
-	<script>
+</script>
 
-	</script>
 </html>

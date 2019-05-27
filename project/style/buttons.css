@@ -1,90 +1,80 @@
-.boutton-iconimage
-{
-	width:		40px;
-	height: 	40px;
+.boutton-iconimage {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	margin: 2px;
 }
 
-.button-colour-line
-{
+.button-colour-line {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
 
-.btn-init
-{
-	padding: 0;
+
+.row,
+.wrap {
+	display: flex;
 }
 
-#black
-{
+
+
+#black {
 	background: url(../img/Color_Black.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#blue
-{
+#blue {
 	background: url(../img/Color_Blue.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#green
-{
+#green {
 	background: url(../img/Color_Green.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#grey
-{
+#grey {
 	background: url(../img/Color_Grey.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#magenta
-{
+#magenta {
 	background: url(../img/Color_Magenta.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#red
-{
+#red {
 	background: url(../img/Color_Red.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#turquoise
-{
+#turquoise {
 	background: url(../img/Color_Turquoise.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#white
-{
+#white {
 	background: url(../img/Color_White.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#yellow
-{
+#yellow {
 	background: url(../img/Color_Yellow.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#solid
-{
+#solid {
 	background: url(../img/Style_Solid.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#dotted
-{
+#dotted {
 	background: url(../img/Style_Dotted.png) no-repeat;
 	background-size: 100% 100%;
 }
 
-#point
-{
+#point {
 	background: url(../img/Style_Point.png) no-repeat;
 	background-size: 100% 100%;
 }
-
