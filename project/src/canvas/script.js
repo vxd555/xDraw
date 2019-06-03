@@ -16,9 +16,11 @@ canvas.on({
       shapeBuilder(e.pointer.x, e.pointer.y);
     } else {
       // directActionHandler(e);
+      AddActionToUndo();
       return
     }
   },
+
 })
 
 // TODO: edycja bezposrednia - bez wczesniejszego zaznaczenia

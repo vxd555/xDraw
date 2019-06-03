@@ -24,12 +24,12 @@ function objectEdit(opp)
       break;
     case 'remove':
       canvas.remove(canvas.getActiveObject());
+      AddActionToUndo();
       // TODO: usuwanie grupy elementow
       break;
     default:
       console.log(`unhandled edit operation: ${opp}`);
   }
-  AddActionToUndo();
 }
 
 
