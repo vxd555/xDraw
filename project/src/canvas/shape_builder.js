@@ -57,6 +57,7 @@ function generateRect(x, y)
   });
   objectDisabler(rect);
   canvas.add(rect)
+  AddActionToUndo();
 }
 
 function generateCircle(x, y)
@@ -72,6 +73,7 @@ function generateCircle(x, y)
   });
   objectDisabler(circle);
   canvas.add(circle)
+  AddActionToUndo();
 }
 
 function generateLine(x, y)
@@ -86,4 +88,5 @@ function generateLine(x, y)
   });
   objectDisabler(line);
   canvas.add(line)
+  AddActionToUndo();
 }

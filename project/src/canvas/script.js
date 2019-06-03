@@ -53,3 +53,29 @@ canvas.on({
 //     canvas.remove(canvas.getActiveObject());
 //   }
 // }
+
+//Wstecz i ponów
+var state;
+var undoList = [];
+var redoList = [];
+
+function AddActionToUndo()
+{
+  redoList = [];
+  undoList.push(state);
+  state = JSON.stringify(canvas);
+}
+
+function UndoRedo(playStack, saveStack)
+{
+  if(playStack.length > 0)
+  {
+    saveStack.push(state);
+    state = playStack.pop();
+    canvas.clear();
+    canvas.loadFromJSON(state, function() {
+      canvas.renderAll();
+    });
+  }
+
+}

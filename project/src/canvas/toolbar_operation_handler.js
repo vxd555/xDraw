@@ -29,6 +29,7 @@ function objectEdit(opp)
     default:
       console.log(`unhandled edit operation: ${opp}`);
   }
+  AddActionToUndo();
 }
 
 
@@ -67,6 +68,7 @@ function objectTransposition(opp)
     default:
       console.log(`unhandled transposition operation: ${opp}`);
   }
+  AddActionToUndo();
 }
 
 function objectColor(colorValue)
@@ -77,6 +79,8 @@ function objectColor(colorValue)
   if(obj){
     obj.set('fill', colorValue);
     canvas.renderAll();
+
+    AddActionToUndo();
   }
 }
 
@@ -88,6 +92,8 @@ function objectStyle(strokeType)
   if(obj){
     obj.set('strokeDashArray', getStroke(strokeType));
     canvas.renderAll();
+
+    AddActionToUndo();
   }
 }
 
