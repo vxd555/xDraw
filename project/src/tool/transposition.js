@@ -3,7 +3,9 @@ var currentTransposition = 0;
 
 function SetTransposition(id)
 {
-	currentShape = id;
+	disableDirectOperations();
+	objectTransposition(transpositionName[id]);
+	currentTransposition = id;
 	$('#currentTransposition').removeClass();
 	$('#currentTransposition').addClass('fa');
 

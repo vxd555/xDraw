@@ -3,7 +3,8 @@ var currentOperation = 0;
 
 function Undo() //cofanie
 {
-	currentShape = 0;
+	disableDirectOperations();
+	currentOperation = 0;
 	$('#currentOperation').removeClass();
 	$('#currentOperation').addClass('fa');
 	$('#currentOperation').addClass('fa-undo');

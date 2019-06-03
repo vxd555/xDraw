@@ -3,7 +3,8 @@ var currentOption = 0;
 
 function SetOption(id)
 {
-	currentShape = id;
+	disableDirectOperations();
+	currentOption = id;
 	$('#currentOption').removeClass();
 	$('#currentOption').addClass('fa');
 

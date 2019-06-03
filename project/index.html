@@ -23,6 +23,7 @@
 
 		 <!--	style	-->
 		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/canvas.css">
 		<link rel="stylesheet" href="style/buttons.css">
 
 		 <!--	js	-->
@@ -90,8 +91,12 @@
 				<button type="button" class="btn boutton-iconimage option-hide" onclick="SetOption(4)"><i class="fa fa-sign-out"></i></button>
 			</div>
 		</form>
+		<div class="canvas-container">
+			<canvas id="canvas" width="1000px" height="700px"></canvas>
+		</div>
 	</body>
-	<script>
-
-	</script>
+	<script src="src/fabric.js"></script>
+	<script src="src/canvan/script.js"></script>
+	<script src="src/canvan/toolbar_operation_handler.js"></script>
+	<script src="src/canvan/shape_builder.js"></script>
 </html>

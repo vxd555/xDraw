@@ -3,6 +3,7 @@ var toolbarTab = [0, 0, 0, 0, 0, 0, 0]
 
 function OnBar(id)
 {
+	$('.canvas-container').css('z-index', -1);
 	if(toolbarTab[id] == 0)
 	{
 		$('.' + toolbarNames[id] + '-hide').toggleClass(toolbarNames[id] + '-show');
@@ -18,6 +19,7 @@ function OnBar(id)
 
 function OffBar(id)
 {
+	$('.canvas-container').css('z-index', 1);
 	$('.' + toolbarNames[id] + '-show').toggleClass(toolbarNames[id] + '-hide');
 	$('.' + toolbarNames[id] + '-show').removeClass(toolbarNames[id] + '-show');
 	toolbarTab[id] = 0;

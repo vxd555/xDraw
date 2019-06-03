@@ -3,6 +3,7 @@ var currentShape = 0;
 
 function SetShape(id)
 {
+	disableDirectOperations();
 	currentShape = id;
 	$('#currentShape').removeClass();
 	$('#currentShape').addClass('fa');

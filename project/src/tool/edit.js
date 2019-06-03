@@ -3,7 +3,9 @@ var currentEditMode = 0;
 
 function SetEdit(id)
 {
-	currentShape = id;
+	disableDirectOperations()
+	objectEdit(editModeName[id]);
+	currentEditMode = id;
 	$('#currentEdit').removeClass();
 	$('#currentEdit').addClass('fa');
 
