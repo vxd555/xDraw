@@ -14,10 +14,13 @@ function SetOption(id)
 	}
 	else if(id == 1) //import
 	{
+		json = JSON.stringify(canvas);
 		$('#currentOption').addClass('fa-upload');
 	}
 	else if(id == 2) //zapis
 	{
+		json = JSON.stringify(canvas);
+		// pukpuk pan serwer
 		$('#currentOption').addClass('fa-folder');
 	}
 	else if(id == 3) //wczytanie

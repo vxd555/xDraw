@@ -30,11 +30,11 @@ function getStroke(strokeType)
   }
 }
 
-function objectDisabler(object)
+function objectDefaultOperationDisable(object)
 {
   object.hoverCursor = 'auto'
+  object.hasControls = false;
   object.selectable = false;
-  // object.hasControls = false;
   object.lockScalingY = true;
   object.lockScalingX = true;
   object.lockRotation = true;
@@ -55,7 +55,7 @@ function generateRect(x, y)
       strokeWidth: 3,
       strokeDashArray: getStroke(styleName[currentStyle])
   });
-  objectDisabler(rect);
+  objectDefaultOperationDisable(rect);
   canvas.add(rect)
 }
 
@@ -70,7 +70,7 @@ function generateCircle(x, y)
       strokeWidth: 3,
       strokeDashArray: getStroke(styleName[currentStyle])
   });
-  objectDisabler(circle);
+  objectDefaultOperationDisable(circle);
   canvas.add(circle)
 }
 
@@ -84,6 +84,10 @@ function generateLine(x, y)
       stroke: colorHex[currentColor],
       strokeDashArray: getStroke(styleName[currentStyle])
   });
-  objectDisabler(line);
+  objectDefaultOperationDisable(line);
+  line.lockScalingY = false;
+  line.lockScalingX = false;
+  line.lockRotation = false;
+  line.hasRotatingPoint = true;
   canvas.add(line)
 }

@@ -1,4 +1,4 @@
-var editModeName = ['point', 'move', 'remove'];
+var editModeName = ['point', 'move', 'remove', 'resize', 'rotate'];
 var currentEditMode = 0;
 
 function SetEdit(id)
@@ -20,6 +20,14 @@ function SetEdit(id)
 	else if(id == 2) //usuwanie obiektów
 	{
 		$('#currentEdit').addClass('fa-trash-o');
+	}
+	else if(id == 3) //zmiana rozmiarow
+	{
+		$('#currentEdit').addClass('fa-expand');
+	}
+	else if(id == 4) //obracanie
+	{
+		$('#currentEdit').addClass('fa-wheelchair');
 	}
 
 	OffBar(3);

@@ -4,7 +4,9 @@ function disableDirectOperations()
 {
   canvas.selection = false;
   activeOperation = null;
-  switchSelectable(false);
+  switchObjectScale(false);
+  switchObjectScale(false);
+  switchObjectRotate(false);
   switchObjectMove(true);
 }
 
@@ -25,6 +27,14 @@ function objectEdit(opp)
     case 'remove':
       canvas.remove(canvas.getActiveObject());
       // TODO: usuwanie grupy elementow
+      break;
+    case 'resize':
+      switchSelectable(true);
+      switchObjectScale(true);
+      break;
+    case 'rotate':
+      switchSelectable(true);
+      switchObjectRotate(true);
       break;
     default:
       console.log(`unhandled edit operation: ${opp}`);
@@ -102,4 +112,14 @@ function switchSelectable(value)
 function switchObjectMove(value)
 {
   canvas.forEachObject(function(obj){obj.set('lockMovementX', value); obj.set('lockMovementY', value); });
+}
+
+function switchObjectScale(value)
+{
+  canvas.forEachObject(function(obj){obj.set('lockScalingX', !value); obj.set('lockScalingY', !value); obj.set('hasControls', value) });
+}
+
+function switchObjectRotate(value)
+{
+  canvas.forEachObject(function(obj){obj.set('lockRotation', !value); obj.set('hasRotatingPoint', value); obj.set('hasControls', value) });
 }
