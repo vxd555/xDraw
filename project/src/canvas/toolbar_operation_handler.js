@@ -26,6 +26,7 @@ function objectEdit(opp)
       break;
     case 'remove':
       canvas.remove(canvas.getActiveObject());
+      AddActionToUndo();
       // TODO: usuwanie grupy elementow
       break;
     case 'resize':
@@ -77,6 +78,7 @@ function objectTransposition(opp)
     default:
       console.log(`unhandled transposition operation: ${opp}`);
   }
+  AddActionToUndo();
 }
 
 function objectColor(colorValue)
@@ -87,6 +89,8 @@ function objectColor(colorValue)
   if(obj){
     obj.set('fill', colorValue);
     canvas.renderAll();
+
+    AddActionToUndo();
   }
 }
 
@@ -98,6 +102,8 @@ function objectStyle(strokeType)
   if(obj){
     obj.set('strokeDashArray', getStroke(strokeType));
     canvas.renderAll();
+
+    AddActionToUndo();
   }
 }
 

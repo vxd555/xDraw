@@ -9,6 +9,7 @@ function Undo() //cofanie
 	$('#currentOperation').addClass('fa');
 	$('#currentOperation').addClass('fa-undo');
 	OffBar(5);
+	UndoRedo(undoList, redoList);
 }
 
 function Redo() //ponawianie
@@ -17,5 +18,5 @@ function Redo() //ponawianie
 	$('#currentOperation').removeClass();
 	$('#currentOperation').addClass('fa');
 	$('#currentOperation').addClass('fa-repeat');
-	OffBar(5);
+	UndoRedo(redoList, undoList);
 }
