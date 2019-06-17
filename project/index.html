@@ -42,13 +42,13 @@
 		<form class="navbar-form navbar-left" action="#" method="post">
 		<div class="container">
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage" onclick="OnBar(0)"><i id="currentShape" class="fa fa-square-o"></i></button>
+				<button id="ShapeButton" type="button" class="btn boutton-iconimage" onclick="OnBar(0)"><i id="currentShape" class="fa fa-square-o"></i></button>
 				<button type="button" class="btn boutton-iconimage shape-hide" onclick="SetShape(0)"><i class="fa fa-square-o"></i></button>
 				<button type="button" class="btn boutton-iconimage shape-hide" onclick="SetShape(1)"><i class="fa fa-circle-o"></i></button>
 				<button type="button" class="btn boutton-iconimage shape-hide" onclick="SetShape(2)"><i class="fa fa-minus"></i></button>
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage btn-init" onclick="OnBar(1)"><i id="black" class="button-colour-line current-color"></i></button>
+				<button id="ColorButton" type="button" class="btn boutton-iconimage btn-init" onclick="OnBar(1)"><i id="black" class="button-colour-line current-color"></i></button>
 				<button type="button" class="btn boutton-iconimage btn-init color-hide" onclick="SetColor(0)"><i id="black" class="button-colour-line"></i></button>
 				<button type="button" class="btn boutton-iconimage btn-init color-hide" onclick="SetColor(1)"><i id="white" class="button-colour-line"></i></button>
 				<button type="button" class="btn boutton-iconimage btn-init color-hide" onclick="SetColor(2)"><i id="grey" class="button-colour-line"></i></button>
@@ -61,13 +61,13 @@
 
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage btn-init" onclick="OnBar(2)"><i id="style_solid" class="button-colour-line current-style"></i></button>
+				<button id="StyleButton" type="button" class="btn boutton-iconimage btn-init" onclick="OnBar(2)"><i id="style_solid" class="button-colour-line current-style"></i></button>
 				<button type="button" class="btn boutton-iconimage btn-init style-hide" onclick="SetStyle(0)"><i id="style_solid" class="button-colour-line"></i></button>
 				<button type="button" class="btn boutton-iconimage btn-init style-hide" onclick="SetStyle(1)"><i id="style_dotted" class="button-colour-line"></i></button>
 				<button type="button" class="btn boutton-iconimage btn-init style-hide" onclick="SetStyle(2)"><i id="style_point" class="button-colour-line"></i></button>
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage" onclick="OnBar(3)"><i id="currentEdit" class="fa fa-mouse-pointer"></i></button>
+				<button id="EditButton" type="button" class="btn boutton-iconimage" onclick="OnBar(3)"><i id="currentEdit" class="fa fa-mouse-pointer"></i></button>
 				<button type="button" class="btn boutton-iconimage edit-hide" onclick="SetEdit(0)"><i class="fa fa-mouse-pointer"></i></button>
 				<button type="button" class="btn boutton-iconimage edit-hide" onclick="SetEdit(1)"><i class="fa fa-arrows"></i></button>
 				<button type="button" class="btn boutton-iconimage edit-hide" onclick="SetEdit(2)"><i class="fa fa-trash-o"></i></button>
@@ -76,19 +76,19 @@
 
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage" onclick="OnBar(4)"><i id="currentTransposition" class="fa fa-arrows-v"></i></button>
+				<button id="TranspositionButton" type="button" class="btn boutton-iconimage" onclick="OnBar(4)"><i id="currentTransposition" class="fa fa-arrows-v"></i></button>
 				<button type="button" class="btn boutton-iconimage transposition-hide" onclick="SetTransposition(0)"><i class="fa fa-arrows-v"></i></button>
 				<button type="button" class="btn boutton-iconimage transposition-hide" onclick="SetTransposition(1)"><i class="fa fa-arrows-h"></i></button>
 				<button type="button" class="btn boutton-iconimage transposition-hide" onclick="SetTransposition(2)"><i class="fa fa-level-up"></i></button>
 				<button type="button" class="btn boutton-iconimage transposition-hide" onclick="SetTransposition(3)"><i class="fa fa-level-down"></i></button>
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage" onclick="OnBar(5)"><i id="currentOperation" class="fa fa-undo"></i></button>
+				<button id="OperationButton" type="button" class="btn boutton-iconimage" onclick="OnBar(5)"><i id="currentOperation" class="fa fa-undo"></i></button>
 				<button type="button" class="btn boutton-iconimage operation-hide" onclick="Undo()"><i class="fa fa-undo"></i></button>
 				<button type="button" class="btn boutton-iconimage operation-hide" onclick="Redo()"><i class="fa fa-repeat"></i></button>
 			</div>
 			<div class="row">
-				<button type="button" class="btn boutton-iconimage" onclick="OnBar(6)"><i id="currentOption" class="fa fa-download"></i></button>
+				<button id="OptionButton" type="button" class="btn boutton-iconimage" onclick="OnBar(6)"><i id="currentOption" class="fa fa-download"></i></button>
 				<button type="button" class="btn boutton-iconimage option-hide" onclick="SetOption(0)"><i class="fa fa-download"></i></button>
 				<button type="button" class="btn boutton-iconimage option-hide" onclick="SetOption(1)"><label id="file-upload-label" for="file-upload"><i class="fa fa-upload"></i></label><input type="file" id="file-upload"></button>
 				<button type="button" class="btn boutton-iconimage option-hide" onclick="SetOption(2)"><i class="fa fa-folder"></i></button>

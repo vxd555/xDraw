@@ -22,4 +22,6 @@ function SetShape(id)
 	}
 
 	OffBar(0);
+	ClearButton();
+	SelectButton(0);
 }

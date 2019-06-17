@@ -27,8 +27,10 @@ function SetEdit(id)
 	}
 	else if(id == 4) //obracanie
 	{
-		$('#currentEdit').addClass('fa-wheelchair');
+		$('#currentEdit').addClass('fa-refresh');
 	}
 
 	OffBar(3);
+	ClearButton();
+	SelectButton(3);
 }

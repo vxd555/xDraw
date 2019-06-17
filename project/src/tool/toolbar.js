@@ -32,3 +32,25 @@ function OffAllBars()
 		OffBar(i);
 	}
 }
+
+function ClearButton()
+{
+	$('#ShapeButton').removeClass('btn-primary');
+	$('#ColorButton').removeClass('btn-primary');
+	$('#StyleButton').removeClass('btn-primary');
+	$('#EditButton').removeClass('btn-primary');
+	$('#TranspositionButton').removeClass('btn-primary');
+	$('#OperationButton').removeClass('btn-primary');
+	$('#OptionButton').removeClass('btn-primary');
+}
+
+function SelectButton(type)
+{
+	if(type == 0) $('#ShapeButton').addClass('btn-primary');
+	else if(type == 1) $('#ColorButton').addClass('btn-primary');
+	else if(type == 2) $('#StyleButton').addClass('btn-primary');
+	else if(type == 3) $('#EditButton').addClass('btn-primary');
+	else if(type == 4) $('#TranspositionButton').addClass('btn-primary');
+	else if(type == 5) $('#OperationButton').addClass('btn-primary');
+	else if(type == 6) $('#OptionButton').addClass('btn-primary');
+}

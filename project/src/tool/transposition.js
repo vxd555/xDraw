@@ -27,4 +27,6 @@ function SetTransposition(id)
 	}
 
 	OffBar(4);
+	ClearButton();
+	SelectButton(4);
 }

@@ -10,6 +10,8 @@ function Undo() //cofanie
 	$('#currentOperation').addClass('fa-undo');
 	OffBar(5);
 	UndoRedo(undoList, redoList);
+	ClearButton();
+	SelectButton(5);
 }
 
 function Redo() //ponawianie
@@ -19,4 +21,6 @@ function Redo() //ponawianie
 	$('#currentOperation').addClass('fa');
 	$('#currentOperation').addClass('fa-repeat');
 	UndoRedo(redoList, undoList);
+	ClearButton();
+	SelectButton(5);
 }

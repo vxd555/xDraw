@@ -41,4 +41,6 @@ function SetOption(id)
 	}
 
 	OffBar(6);
+	ClearButton();
+	SelectButton(6);
 }
