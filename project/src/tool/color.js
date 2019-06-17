@@ -7,5 +7,5 @@ function SetColor(id)
 	objectColor(colorHex[id]);
 	currentColor = id;
 	$('.current-color').attr('id', colorName[id]);
-	OffBar(1);
+	OffAllBars();
 }

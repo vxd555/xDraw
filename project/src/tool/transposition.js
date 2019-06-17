@@ -26,7 +26,7 @@ function SetTransposition(id)
 		$('#currentTransposition').addClass('fa-level-down');
 	}
 
-	OffBar(4);
+	OffAllBars();
 	ClearButton();
 	SelectButton(4);
 }

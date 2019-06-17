@@ -8,7 +8,7 @@ function Undo() //cofanie
 	$('#currentOperation').removeClass();
 	$('#currentOperation').addClass('fa');
 	$('#currentOperation').addClass('fa-undo');
-	OffBar(5);
+	OffAllBars();
 	UndoRedo(undoList, redoList);
 	ClearButton();
 	SelectButton(5);
@@ -20,6 +20,7 @@ function Redo() //ponawianie
 	$('#currentOperation').removeClass();
 	$('#currentOperation').addClass('fa');
 	$('#currentOperation').addClass('fa-repeat');
+	OffAllBars();
 	UndoRedo(redoList, undoList);
 	ClearButton();
 	SelectButton(5);

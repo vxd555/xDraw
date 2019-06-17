@@ -30,7 +30,7 @@ function SetEdit(id)
 		$('#currentEdit').addClass('fa-refresh');
 	}
 
-	OffBar(3);
+	OffAllBars();
 	ClearButton();
 	SelectButton(3);
 }

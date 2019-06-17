@@ -6,5 +6,5 @@ function SetStyle(id)
 	objectStyle(styleName[currentStyle]);
 	currentStyle = id;
 	$('.current-style').attr('id', 'style_' + styleName[id]);
-	OffBar(2);
+	OffAllBars();
 }

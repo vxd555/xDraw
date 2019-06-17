@@ -40,7 +40,7 @@ function SetOption(id)
 		location.assign("./login_page.html");
 	}
 
-	OffBar(6);
+	OffAllBars();
 	ClearButton();
 	SelectButton(6);
 }

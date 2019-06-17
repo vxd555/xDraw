@@ -21,7 +21,7 @@ function SetShape(id)
 		$('#currentShape').addClass('fa-minus');
 	}
 
-	OffBar(0);
+	OffAllBars();
 	ClearButton();
 	SelectButton(0);
 }
