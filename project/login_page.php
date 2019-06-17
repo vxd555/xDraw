@@ -53,6 +53,8 @@
             <button class="btn btn-primary sumbit-button" type="submit" name="send"> Zaloguj </button>
             <!-- <button type="submit" class="btn btn-primary sumbit-button">Zaloguj</button> -->
          </form>
+         login: Dawid
+         hasło: 123
       </div>
    </body>
    <script></script>
