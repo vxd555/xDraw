@@ -11,6 +11,12 @@ function SetOption(id)
 	if(id == 0) //eksport
 	{
 		$('#currentOption').addClass('fa-download');
+
+		SetOption(2); //zapisanie kompozycji zanim się png do pobrania
+
+		var canvas = document.getElementById("canvas");
+    	var img    = canvas.toDataURL("image/png");
+    	document.write('<img src="'+img+'"/>');
 	}
 	else if(id == 1) //import
 	{
