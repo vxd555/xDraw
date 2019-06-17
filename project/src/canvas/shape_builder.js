@@ -7,9 +7,6 @@ function shapeBuilder(x, y) {
     case "circle":
       generateCircle(x, y)
       break;
-    case "line":
-      generateLine(x, y)
-      break;
     default:
       console.log(`unhandled shape to build operation: ${shapeName[currentShape]}`);
       break
@@ -76,10 +73,10 @@ function generateCircle(x, y)
   AddActionToUndo();
 }
 
-function generateLine(x, y)
+function generateLine(x, y, points)
 {
   // TODO: nie powinno byc na sztywno
-  var line = new fabric.Line([100, 100, 200, 200], {
+  var line = new fabric.Line(points, {
       top : y,
       left : x,
       strokeWidth: 3,

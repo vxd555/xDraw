@@ -1,4 +1,6 @@
 var canvas = null;
+var isDown = true;
+var line = null;
 InitCanvas();
 
 function InitCanvas()
@@ -16,10 +18,40 @@ canvas.on({
     }
   },
 
+  'mouse:down': function(o){
+    if(activeOperation === null && shapeName[currentShape] === "line"){
+      isDown = true;
+      var pointer = canvas.getPointer(o.e);
+      var points = [ pointer.x, pointer.y, pointer.x, pointer.y ];
+      generateLine(pointer.x, pointer.y, points)
+      line = new fabric.Line(points, {
+        strokeWidth: 3,
+        stroke: colorHex[currentColor],
+        strokeDashArray: getStroke(styleName[currentStyle]),
+        originX: 'center',
+        originY: 'center'
+      });
+      canvas.add(line);
+    }
+  },
+
+  'mouse:move': function(o){
+    if (!isDown) return;
+    var pointer = canvas.getPointer(o.e);
+    if(line != null){
+      line.set({ x2: pointer.x, y2: pointer.y });
+      canvas.renderAll();
+    }
+  },
+
+
   'mouse:up': function(e) {
     // jezeli nie ma aktywnej operacji to wstaw nowy objekt
     if (activeOperation === null) {
-      shapeBuilder(e.pointer.x, e.pointer.y);
+      if(shapeName[currentShape] == "line")
+        isDown = false;
+      else
+        shapeBuilder(e.pointer.x, e.pointer.y);
     } else {
       // directActionHandler(e);
       AddActionToUndo();
