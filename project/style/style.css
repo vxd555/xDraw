@@ -9,3 +9,8 @@
 @media (min-width: 1200px) {
   .main-page-logo { width: 300px; }
 }
+
+.navbar-form
+{
+  padding: 0;
+}
