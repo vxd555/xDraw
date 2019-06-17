@@ -19,7 +19,7 @@ canvas.on({
   },
 
   'mouse:down': function(o){
-    if(activeOperation === null && shapeName[currentShape] === "line"){
+    if(activeOperation === true && shapeName[currentShape] === "line"){
       isDown = true;
       var pointer = canvas.getPointer(o.e);
       var points = [ pointer.x, pointer.y, pointer.x, pointer.y ];
@@ -32,6 +32,7 @@ canvas.on({
         originY: 'center'
       });
       canvas.add(line);
+      AddActionToUndo();
     }
   },
 
@@ -47,7 +48,7 @@ canvas.on({
 
   'mouse:up': function(e) {
     // jezeli nie ma aktywnej operacji to wstaw nowy objekt
-    if (activeOperation === null) {
+    if (activeOperation === true) {
       if(shapeName[currentShape] == "line")
         isDown = false;
       else

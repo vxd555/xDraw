@@ -1,9 +1,8 @@
-var activeOperation = null;
+var activeOperation = true;
 
 function disableDirectOperations()
 {
   canvas.selection = false;
-  activeOperation = null;
   switchObjectScale(false);
   switchObjectScale(false);
   switchObjectRotate(false);
@@ -12,7 +11,7 @@ function disableDirectOperations()
 
 function objectEdit(opp)
 {
-  activeOperation = opp;
+  activeOperation = false;
 
   switch (opp) {
     case 'point':
@@ -45,7 +44,7 @@ function objectEdit(opp)
 
 function objectTransposition(opp)
 {
-  activeOperation = opp
+  activeOperation = false
   switchSelectable(true);
 
   var obj = canvas.getActiveObject();
@@ -83,7 +82,6 @@ function objectTransposition(opp)
 
 function objectColor(colorValue)
 {
-  activeOperation = null;
 
   var obj = canvas.getActiveObject();
   if(obj){
@@ -96,7 +94,6 @@ function objectColor(colorValue)
 
 function objectStyle(strokeType)
 {
-  activeOperation = null;
 
   var obj = canvas.getActiveObject();
   if(obj){
