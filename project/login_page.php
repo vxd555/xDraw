@@ -1,15 +1,20 @@
 <?php
    include 'php/functions.php';
+   $login_fail = false;
    if (isset($_POST['send']))
    {
-   		$login = $_POST['login'];
-   		$password = $_POST['password'];
+   	$login = $_POST['login'];
+      $password = $_POST['password'];
    
        if(isAuthorization($login,$password))
        {
-           $_SESSION['signed'] = true;
-   				$_SESSION['name'] = $login;
-           header("Location: select_page.php");
+         $_SESSION['signed'] = true;
+   		$_SESSION['name'] = $login;
+         header("Location: select_page.php");
+       }
+       else 
+       {
+         $login_fail = true;
        }
    }
    ?>
@@ -51,8 +56,12 @@
                <input type="password" class="form-control" id="userPassword" placeholder="Podaj hasło" name="password">
             </div>
             <button class="btn btn-primary sumbit-button" type="submit" name="send"> Zaloguj </button>
-            <!-- <button type="submit" class="btn btn-primary sumbit-button">Zaloguj</button> -->
+            <?php if($login_fail): ?>
+            <div class="alert alert-danger media">
+               <strong>Błąd!</strong> Nieprawidłowy login lub hasło. Spróbuj jeszcze raz.</div>
+            <?php endif; ?>
          </form>
+         
       </div>
    </body>
    <script></script>
