@@ -1,6 +1,12 @@
-var canvas = new fabric.Canvas('canvas');
-canvas.selection = false; // Disable group selection
-fabric.Group.prototype.hasControls = false;
+var canvas = null;
+InitCanvas();
+
+function InitCanvas()
+{
+  canvas = new fabric.Canvas('canvas');
+  canvas.selection = false; // Disable group selection
+  fabric.Group.prototype.hasControls = false;
+}
 
 canvas.on({
   'object:selected': function(e) {
