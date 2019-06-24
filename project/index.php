@@ -1,3 +1,12 @@
+<?php
+if(include 'php/sql.php');
+$signed = isset($_SESSION['signed']);
+if(!$signed)
+{
+	header("Location: select_page.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>

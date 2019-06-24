@@ -1,5 +1,8 @@
+<script>
+    window.localStorage.clear();
+</script>
 <?php
 session_start();
 session_destroy();
-header("Location: login_page.php");
+header("Location: select_page.php");
 ?>
