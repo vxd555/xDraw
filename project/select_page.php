@@ -1,13 +1,27 @@
 <?php
-   if(include 'php/functions.php');
-   
    $iterator = 1;
+
+   if(include 'php/sql.php');
+   if (isset($_POST['delete']))
+   {
+      deleteComposition($_POST['delete']);
+   }
+
+   if (isset($_POST['comp']))
+   {
+      $comp_id = $_POST['comp'];
+      $comp_data = getJson($comp_id);
+   }
    
    $signed = isset($_SESSION['signed']);
    if($signed)
    {
    		$name = $_SESSION['name'];
    		$user_id = getUserId($name);
+   }
+
+   if(array_key_exists('add_comp',$_POST)){
+      addComposition($user_id);
    }
    ?>
 <!DOCTYPE html>
@@ -28,6 +42,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="./src/select.js"></script>
       <!-- Add icon library -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!--	style	-->
@@ -35,7 +50,7 @@
       <link rel="stylesheet" href="./style/buttons.css">
       <link rel="stylesheet" href="./style/select_page.css">
    </head>
-   <body>
+   <body id="body">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
          <a class="navbar-brand" href="">xDraw</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -69,13 +84,16 @@
             <?php foreach(getCompositions($user_id) as $composition): ?>
             <div class="list-group select-list">
                <div class="list-group-item list-group-item-action">
-                  <a href="./index.html" class="d-inline">Kopozycja <?php echo $iterator++." - ". $composition['name'] ?></a>
-                  <a href="#delete_composition_1" class="float-right d-block delete-link">
-                  <i class="fa fa-trash delete-icon float-right d-block"></i>
-                  </a>
+                  <a href="#" class="d-inline" onClick="goToEditor(<?php echo $composition['id']; ?>);">Kopozycja <?php echo $iterator++." - ". $composition['name'] ?></a>
+                  <form method="post" class="float-right d-block delete-link">
+                     <button type="submit" class="fa fa-trash delete-icon float-right d-block" name="delete" id="delete" value="<?php echo $composition['id'] ?>"></i></button>
+                  </form>
+                  <button type="submit" onClick="rename('<?php echo $composition['id'] ?>')" class="fa delete-icon fa-edit float-right d-block mr-2" name="delete" id="delete" value="<?php echo $composition['id'] ?>"></i></button>
                </div>
                <?php endforeach; ?>
-               <a href="#new_project" class="list-group-item list-group-item-action list-group-item-info text-center "><i class="fa fa-plus-circle"></i></a>
+               <form method="post">
+                  <button type="submit" class="list-group-item list-group-item-action list-group-item-info text-center" name="add_comp" id="add_comp"><i class="fa fa-plus-circle"></i></button>
+               </form>
             </div>
             <?php else: ?>
             <div class="col-sm-8 m-auto pt-sm-4">
@@ -88,6 +106,14 @@
             <?php endif; ?>
          </div>
       </div>
+
+      <script type="text/javascript">
+          var id = '<?php echo $comp_id; ?>';
+          var data = '<?php echo $comp_data; ?>';
+          
+          localStorage.setItem("id", id);
+          localStorage.setItem("json", data);
+          location.href = 'index.php';
+      </script>
    </body>
-   <script></script>
 </html>

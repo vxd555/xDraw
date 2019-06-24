@@ -1,5 +1,6 @@
 <?php
-   include 'php/functions.php';
+   include 'php/sql.php';
+   
    if (isset($_POST['send']))
    {
    		$login = $_POST['login'];
