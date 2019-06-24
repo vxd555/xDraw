@@ -21,8 +21,6 @@ function getJson($id)
      return $result['data'];
 }
 
-
-
 function getCompositions($user_id): iterator
 {
     $conn = OpenCon();

@@ -50,7 +50,7 @@
       <link rel="stylesheet" href="./style/buttons.css">
       <link rel="stylesheet" href="./style/select_page.css">
    </head>
-   <body id="body">
+   <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
          <a class="navbar-brand" href="">xDraw</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
